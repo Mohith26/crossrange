@@ -1,0 +1,123 @@
+{
+  "note": "measured under CPython 3.12 (WebAssembly build); native CPython is faster. No numpy: the state is 16 doubles and the derivative is scalar arithmetic.",
+  "step_rate": {
+    "steps": 10000,
+    "seconds": 0.998,
+    "steps_per_second": 10020,
+    "derivative_evals": 40000,
+    "derivative_evals_per_second": 40080,
+    "simulated_seconds_per_wall_second": 20
+  },
+  "vacuum_accuracy": {
+    "flight_time": 20,
+    "downrange_error_m": 7.53516360418871e-10,
+    "altitude_error_m": 6.548361852765083e-11
+  },
+  "energy_drift": {
+    "relative_drift": 2.5865429603202164e-13,
+    "seconds_simulated": 30
+  },
+  "quaternion_drift": {
+    "norm_error_without_renormalization": 6.661338147750939e-15,
+    "seconds_simulated": 20,
+    "body_rate_magnitude_rad_s": 1.1532562594670797
+  },
+  "terminal": {
+    "terminal_speed_m_s": 549.808,
+    "tanh_relative_error": 1.3590521184961206e-15
+  },
+  "impact_step_independence": {
+    "ranges_m": {
+      "dt_0.02": 3856.741547082078,
+      "dt_0.01": 3856.741547082379,
+      "dt_0.005": 3856.7415470824235
+    },
+    "spread_m": 3.4560798667371273e-10
+  },
+  "convergence": {
+    "smooth_tables_order": 4.057,
+    "production_tables_order": 4.047,
+    "per_axis_spread_at_dt_0p02": 0.157,
+    "norm_order_at_dt_0p02": 4.025
+  },
+  "sitl": {
+    "ideal_full_rate": {
+      "final_pitch_deg": 4.869,
+      "settled_mean_error_deg": 0.2278,
+      "control_updates": 12501
+    },
+    "realistic_100hz_delayed": {
+      "final_pitch_deg": 4.873,
+      "settled_mean_error_deg": 0.2288,
+      "control_updates": 2501,
+      "physics_steps_per_control": 5
+    },
+    "control_rate_sweep": [
+      {
+        "control_hz": 500,
+        "settled_mean_error_deg": 0.2284,
+        "settled_peak_error_deg": 0.38,
+        "final_pitch_deg": 4.87,
+        "diverged": false
+      },
+      {
+        "control_hz": 250,
+        "settled_mean_error_deg": 0.2285,
+        "settled_peak_error_deg": 0.38,
+        "final_pitch_deg": 4.865,
+        "diverged": false
+      },
+      {
+        "control_hz": 100,
+        "settled_mean_error_deg": 0.2288,
+        "settled_peak_error_deg": 0.38,
+        "final_pitch_deg": 4.873,
+        "diverged": false
+      },
+      {
+        "control_hz": 50,
+        "settled_mean_error_deg": 0.2288,
+        "settled_peak_error_deg": 0.38,
+        "final_pitch_deg": 4.868,
+        "diverged": false
+      },
+      {
+        "control_hz": 25,
+        "settled_mean_error_deg": 0.2282,
+        "settled_peak_error_deg": 0.39,
+        "final_pitch_deg": 4.867,
+        "diverged": false
+      },
+      {
+        "control_hz": 10,
+        "settled_mean_error_deg": 5.1803,
+        "settled_peak_error_deg": 8.3,
+        "final_pitch_deg": -1.739,
+        "diverged": false
+      }
+    ]
+  },
+  "montecarlo": {
+    "cases": 100,
+    "physics_hz": 500,
+    "control_hz": 100,
+    "flight_seconds": 10,
+    "dispersed": [
+      "mass 3% 1-sigma",
+      "induced drag factor 10%",
+      "elevator power 8%",
+      "pitch inertia 5%",
+      "wind speed half-normal sigma 6 m/s, random heading"
+    ],
+    "downrange_mean_m": 1783.82,
+    "downrange_std_m": 2.99,
+    "crossrange_mean_m": -0.134,
+    "crossrange_std_m": 1.554,
+    "crossrange_p05_m": -2,
+    "crossrange_p95_m": 2.2,
+    "mean_pitch_error_deg": 1.205,
+    "mean_pitch_error_std_deg": 0.11,
+    "failures": 0
+  }
+}
+
